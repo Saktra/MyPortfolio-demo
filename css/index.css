@@ -1676,3 +1676,382 @@ body.dark-mode .theme-toggle:hover {
     width: 100%;
   }
 }
+
+/* ==================================================
+   FINAL MOBILE RESPONSIVE FIX
+   Keep this block at the VERY END of the CSS file
+================================================== */
+
+:root{
+  --card-bg:#fff;
+  --border:#eeeeee;
+  --text:#555;
+  --accent:#11ded7;
+  --accent-shadow:rgba(17,222,215,.25);
+}
+
+body.dark-mode{
+  --card-bg:#24272a;
+  --border:#35393d;
+  --text:#ddd;
+  --accent:#ff9d1c;
+  --accent-shadow:rgba(255,157,28,.28);
+}
+
+@media(max-width:850px){
+  header{
+    display:grid;
+    grid-template-columns:1fr auto;
+    grid-template-rows:auto auto;
+    align-items:center;
+    gap:10px;
+    margin:8px 12px;
+    padding:10px 12px;
+    top:6px;
+    border-radius:18px;
+  }
+
+  header h1{
+    grid-column:1;
+    grid-row:1;
+    font-size:18px;
+    line-height:1.2;
+    white-space:nowrap;
+  }
+
+  .theme-toggle{
+    position:static;
+    grid-column:2;
+    grid-row:1;
+    width:36px;
+    height:36px;
+    justify-self:end;
+  }
+
+  nav{
+    grid-column:1 / -1;
+    grid-row:2;
+    width:100%;
+    justify-content:flex-start;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  nav::-webkit-scrollbar{
+    display:none;
+  }
+
+  nav a{
+    flex:0 0 auto;
+    font-size:13px;
+    padding:6px 11px;
+  }
+
+  main{
+    width:100%;
+    padding:10px 12px;
+  }
+
+  section,
+  aside,
+  article{
+    width:100%;
+    padding:12px;
+    border-radius:14px;
+  }
+
+  aside,
+  article{
+    margin-top:18px;
+  }
+
+  .about-me{
+    min-height:auto;
+    display:block;
+  }
+
+  .about-me .text{
+    width:100%;
+    padding:55px 18px;
+    text-align:center;
+  }
+
+  .about-me .text h2{
+    font-size:2rem;
+    margin-bottom:18px;
+  }
+
+  .about-me .text p{
+    max-width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:13px;
+    line-height:1.75;
+  }
+
+  .skill-section{
+    display:flex;
+    flex-direction:column;
+    min-height:auto;
+    padding:25px 12px;
+  }
+
+  .skill-content{
+    order:1;
+    width:100%;
+    padding:10px 5px 25px;
+  }
+
+  .skill-photo{
+    order:2;
+    width:100%;
+    min-height:auto;
+    margin-top:10px;
+  }
+
+  .skill-photo img{
+    width:min(300px,85vw);
+    max-width:100%;
+  }
+
+  .skills-list{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:20px;
+  }
+
+  .skill-tools{
+    padding:28px 0 32px;
+  }
+
+  .tools-container{
+    width:100%;
+  }
+
+  .tool-item{
+    width:78px;
+    height:78px;
+    margin-right:18px;
+  }
+
+  .tool-item img{
+    width:38px;
+    height:38px;
+  }
+
+  .contianer-project{
+    padding:32px 10px;
+  }
+
+  .gr-box{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+  }
+
+  .contact-content{
+    min-height:auto;
+    padding:45px 15px;
+  }
+
+  .contact-links{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+
+  .contact-social{
+    width:100%;
+    min-width:0;
+    padding:10px 12px;
+  }
+}
+
+@media(max-width:600px){
+  header{
+    margin:7px 8px;
+    padding:9px 10px;
+    border-radius:16px;
+  }
+
+  header h1{
+    font-size:16px;
+  }
+
+  .theme-toggle{
+    width:33px;
+    height:33px;
+    font-size:15px;
+  }
+
+  nav{
+    gap:3px;
+    padding:3px;
+  }
+
+  nav a{
+    font-size:11px;
+    padding:6px 9px;
+  }
+
+  main{
+    padding:8px;
+  }
+
+  section,
+  aside,
+  article{
+    padding:9px;
+    border-radius:12px;
+  }
+
+  .hr-text::after{
+    font-size:17px;
+  }
+
+  .about-me .text{
+    padding:45px 12px;
+  }
+
+  .about-me .text h2{
+    font-size:1.65rem;
+  }
+
+  .about-me .text p{
+    font-size:12.5px;
+    line-height:1.7;
+  }
+
+  .skill-section{
+    padding:22px 8px;
+  }
+
+  .skill-content{
+    padding:8px 4px 20px;
+  }
+
+  .skill-content h2{
+    font-size:1.6rem;
+  }
+
+  .skill-description{
+    font-size:12.5px;
+    margin-bottom:25px;
+  }
+
+  .skills-list{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .skill-photo img{
+    width:min(260px,80vw);
+  }
+
+  .tools-title h3{
+    font-size:18px;
+  }
+
+  .tool-item{
+    width:72px;
+    height:72px;
+    margin-right:15px;
+  }
+
+  .tool-item img{
+    width:34px;
+    height:34px;
+  }
+
+  .contianer-project{
+    padding:28px 6px;
+  }
+
+  .contianer-project h1{
+    font-size:20px;
+  }
+
+  .contianer-project>p{
+    font-size:12.5px;
+  }
+
+  .gr-box{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .gr-box .box,
+  .gr-box .box>a{
+    min-height:200px;
+  }
+
+  .gr-box .box img{
+    height:145px;
+  }
+
+  .contact-content{
+    padding:38px 10px;
+  }
+
+  .contact-content h2{
+    font-size:1.65rem;
+  }
+
+  .contact-content p{
+    font-size:12.5px;
+    margin-bottom:20px;
+  }
+
+  .contact-links{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .contact-social{
+    font-size:12px;
+    padding:10px 7px;
+  }
+
+  .contact-social i{
+    font-size:16px;
+  }
+
+  footer{
+    padding:22px 10px;
+  }
+}
+
+@media(max-width:400px){
+  header h1{
+    font-size:15px;
+  }
+
+  nav a{
+    font-size:10.5px;
+    padding:5px 8px;
+  }
+
+  .about-me .text{
+    padding:38px 8px;
+  }
+
+  .about-me .text h2{
+    font-size:1.45rem;
+  }
+
+  .skill-content h2{
+    font-size:1.45rem;
+  }
+
+  .skill-photo img{
+    width:min(230px,78vw);
+  }
+
+  .contact-links{
+    grid-template-columns:1fr;
+  }
+
+  .contact-social{
+    width:100%;
+  }
+}
